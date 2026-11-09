@@ -1,0 +1,4 @@
+config/local.php
+storage/logs/*.log
+storage/backups/*
+.DS_Store

@@ -1,0 +1,11 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Deny access to dotfiles
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

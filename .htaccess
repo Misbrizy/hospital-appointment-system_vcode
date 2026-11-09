@@ -1,0 +1,6 @@
+# This file only matters if your web server's document root is accidentally
+# pointed at this top-level folder instead of public/ (the correct target).
+# It blocks direct access to application code, config and the database folder.
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(app|config|database|cron|bin|storage)/ - [F,L]
